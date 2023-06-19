@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\CategoriesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +17,15 @@ use App\Http\Controllers\SiteController;
 |
 */
 
+Route::get('/', [SiteController::class, 'index'])->name('home');
 Route::get('/', [SiteController::class, 'index'])->name('shop');
 Route::get('about', [SiteController::class, 'about'])->name('about');
 Route::get('footer', [SiteController::class, 'footer'])->name('footer');
 Route::get('FAQs', [SiteController::class, 'FAQs'])->name('FAQs');
 Route::get('contact', [SiteController::class, 'contact'])->name('contact');
 Route::get('product', [SiteController::class, 'product'])->name('product');
+Route::resource('categories', CategoriesController::class)->only(['index', 'show']);
+Route::resource('products', ProductsController::class)->only(['index', 'show']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

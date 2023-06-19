@@ -23,7 +23,8 @@
                     <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                         <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('shop')}}">Shop</a></li>
                         <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('about')}}">About</a></li>
-                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('product')}}">Product</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('categories.index')}}">Categories</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('products.index')}}">Products</a></li>
                         <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('contact')}}">Contact</a></li>
                     </ul>
                 </nav>
